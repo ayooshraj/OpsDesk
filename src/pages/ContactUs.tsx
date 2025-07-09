@@ -41,14 +41,14 @@ const ContactUs = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
+      details: "+91 6200479553",
       description: "Monday to Friday from 9am to 6pm EST"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "123 Business Ave, Suite 100\nSan Francisco, CA 94105",
-      description: "Our headquarters in the heart of downtown"
+      details: "Lovely Professional University, Jalandhar - Delhi G.T. Road, Phagwara, Punjab (India) - 144411",
+      description: "Our headquarters lie at the heart of LPU"
     },
     {
       icon: Clock,
