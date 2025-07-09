@@ -2,57 +2,40 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import WebsiteHeader from "@/components/WebsiteHeader";
 import WebsiteFooter from "@/components/WebsiteFooter";
-import { Users, Target, Award, Heart } from "lucide-react";
+import { Users, Target, Award, Heart, Lightbulb, Rocket } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const values = [
     {
       icon: Users,
-      title: "Customer First",
-      description: "Everything we do is focused on helping our customers succeed and grow their agencies."
+      title: "Built for Servicepreneurs",
+      description: "Designed specifically for agency owners and freelancers who live this life every day."
+    },
+    {
+      icon: Lightbulb,
+      title: "From Real Experience",
+      description: "Built by someone who understands your pain points, not by a startup guessing your needs."
     },
     {
       icon: Target,
-      title: "Innovation",
-      description: "We continuously innovate to provide cutting-edge solutions that stay ahead of industry trends."
-    },
-    {
-      icon: Award,
-      title: "Excellence",
-      description: "We strive for excellence in every aspect of our product and service delivery."
+      title: "Purposeful Design",
+      description: "No bloat, just what you need. Lightweight but powerful operational tools."
     },
     {
       icon: Heart,
-      title: "Integrity",
-      description: "We build trust through transparency, honesty, and reliable service to our community."
+      title: "Community Driven",
+      description: "Built in public with feedback from real servicepreneurs who use it daily."
     }
   ];
 
-  const team = [
-    {
-      name: "Alex Thompson",
-      role: "CEO & Founder",
-      image: "/placeholder.svg",
-      bio: "Former agency owner with 15+ years of experience in digital marketing and operations management."
-    },
-    {
-      name: "Sarah Kim", 
-      role: "CTO",
-      image: "/placeholder.svg",
-      bio: "Technology leader with expertise in scaling SaaS platforms and building enterprise-grade solutions."
-    },
-    {
-      name: "Marcus Johnson",
-      role: "Head of Product",
-      image: "/placeholder.svg",
-      bio: "Product strategist passionate about creating intuitive experiences that solve real business problems."
-    },
-    {
-      name: "Lisa Chen",
-      role: "Head of Customer Success",
-      image: "/placeholder.svg",
-      bio: "Customer advocate dedicated to ensuring every agency gets maximum value from our platform."
-    }
+  const whoShouldUse = [
+    "Editors working with multiple creators",
+    "SEO experts handling client retainers", 
+    "Social media managers coordinating approvals",
+    "Consultants managing 1:1 client sessions",
+    "Anyone who delivers services and manages feedback, invoices, and delivery"
   ];
 
   return (
@@ -62,60 +45,66 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-6xl mb-6">✨</div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About OpsDesk
+            From Chaos to Clarity
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            We're on a mission to empower agencies worldwide with the tools they need to operate efficiently, 
-            scale successfully, and focus on what they do best - creating amazing work for their clients.
+            A tool built by a servicepreneur for servicepreneurs
           </p>
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Founder Story Section */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <div className="text-4xl mb-4">🧠</div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">How This Idea Was Born</h2>
               <p className="text-gray-600 mb-4">
-                OpsDesk was born from firsthand experience running a digital marketing agency. Our founder, 
-                Alex Thompson, spent years juggling multiple tools, spreadsheets, and platforms just to keep 
-                track of clients, projects, and invoices.
+                I'm Raj, the founder of OpsDesk — and like many agency owners and freelancers, 
+                I was drowning in client work, feedback loops, invoices, approvals, revisions, and missed messages.
               </p>
               <p className="text-gray-600 mb-4">
-                After experiencing the pain points of fragmented workflows and inefficient processes, 
-                Alex assembled a team of experienced developers and product experts to create a unified 
-                solution that would solve these problems once and for all.
+                I wasn't lacking skills or clients. <strong>I was lacking structure.</strong>
               </p>
-              <p className="text-gray-600">
-                Today, OpsDesk serves over 1000+ agencies worldwide, helping them streamline operations, 
-                improve client satisfaction, and focus on growing their business rather than managing it.
+              <p className="text-gray-600 mb-4">
+                Running my own SEO and video editing agency, I realized how broken and scattered 
+                most service operations are. We were using Google Sheets, WhatsApp, Notion, Trello, 
+                and still forgetting who approved what, which invoice was paid, or when a revision was requested.
               </p>
+              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                <p className="text-gray-800 font-medium italic">
+                  "Why isn't there a clean, purpose-built tool just for servicepreneurs like me?"
+                </p>
+                <p className="text-gray-600 mt-2">So I built it.</p>
+              </div>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">1000+</div>
-                <div className="text-gray-600 mb-4">Agencies Served</div>
-                <div className="text-4xl font-bold text-purple-600 mb-2">50k+</div>
-                <div className="text-gray-600 mb-4">Projects Managed</div>
-                <div className="text-4xl font-bold text-green-600 mb-2">$50M+</div>
-                <div className="text-gray-600">Invoices Processed</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                <div className="text-gray-600 mb-4">Servicepreneurs Served</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">10k+</div>
+                <div className="text-gray-600 mb-4">Client Projects Managed</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">$2M+</div>
+                <div className="text-gray-600">Revenue Tracked</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Mission Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
-            <p className="text-xl text-gray-600">
-              The principles that guide everything we do
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-4xl mb-4">🎯</div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            To help every freelancer and service-based business get clarity on client work, 
+            track feedback & revisions in one place, log invoices and approvals without friction, 
+            and run lean, efficient operations with pride.
+          </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -137,57 +126,103 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* What Makes Us Unique */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're a passionate team of entrepreneurs, developers, and customer success experts 
-              dedicated to helping agencies thrive.
-            </p>
+            <div className="text-4xl mb-4">🛠️</div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Makes OpsDesk Unique?</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="border-none shadow-lg">
-                <CardHeader className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-gray-600">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <CardTitle className="text-lg">{member.name}</CardTitle>
-                  <CardDescription className="text-blue-600 font-medium">
-                    {member.role}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600 text-center">{member.bio}</p>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="text-2xl">✅</div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Designed specifically for agency owners & servicepreneurs</h3>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-2xl">🧠</div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Built by someone who lives this life — not by a startup guessing your pain</h3>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-2xl">💬</div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Takes feedback seriously — literally logs it project by project</h3>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="text-2xl">💸</div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Tracks money with clarity — unpaid invoices don't go unseen</h3>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-2xl">✨</div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Lightweight but powerful — no bloat, just what you need</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Should Use This */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="text-4xl mb-4">👤</div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Who Should Use This?</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {whoShouldUse.map((user, index) => (
+              <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <div className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0"></div>
+                <span className="text-gray-700">{user}</span>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Personal Message */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-4xl mb-6">🫱🏽‍🫲🏽</div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Our Mission
+            Let's Grow Together
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            To democratize agency management by providing powerful, intuitive tools that help agencies 
-            of all sizes operate efficiently, deliver exceptional client experiences, and achieve 
-            sustainable growth.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-            <p className="text-lg text-white italic">
-              "We believe that when agencies can focus on their craft instead of administrative overhead, 
-              they create better work, happier clients, and more successful businesses."
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+            <p className="text-lg text-white mb-4">
+              I'm building this in public — learning, iterating, improving.
+              If you're a servicepreneur, I'd love your feedback, feature requests, and ideas.
             </p>
-            <p className="text-blue-100 mt-4">- Alex Thompson, CEO & Founder</p>
+            <p className="text-lg text-white italic">
+              Because this isn't just a product — it's a platform built to support the way we work.
+            </p>
+            <div className="mt-6">
+              <p className="text-blue-100 text-lg">— Raj</p>
+              <p className="text-blue-100">Founder, Servicepreneur, Creator of OpsDesk</p>
+            </div>
+          </div>
+          <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+            <Link to="/signup">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto">
+                Start Your Journey
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto">
+                Share Your Feedback
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
