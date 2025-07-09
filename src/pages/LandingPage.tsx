@@ -137,8 +137,8 @@ const LandingPage = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3">
-                Watch Demo
+              <Button size="lg" variant="outline" className="text-lg px-8 py-3"><a href="DemoVideo.tsx">
+                Watch Demo</a>
               </Button>
             </div>
             <p className="text-sm text-gray-500 mt-4">No credit card required • 14-day free trial</p>
