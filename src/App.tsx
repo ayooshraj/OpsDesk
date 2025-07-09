@@ -17,6 +17,7 @@ import LandingPage from "./pages/LandingPage";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
+import DemoVideo from "./pages/DemoVideo";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/demo" element={<DemoVideo />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           
