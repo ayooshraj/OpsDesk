@@ -137,7 +137,7 @@ const LandingPage = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Link to="/DemoVideo"></Link><Button size="lg" variant="outline" className="text-lg px-8 py-3">
+              <Link to="/Demo"></Link><Button size="lg" variant="outline" className="text-lg px-8 py-3">
                 Watch Demo
               </Button>
               </Link>
